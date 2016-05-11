@@ -1,8 +1,9 @@
 <<<<<<< HEAD
 # Majordome
-Cci est la version V1.0
+               MAJORDOME VERSION DE PRODUCTION
+			   ===============================
 
-Evolution faite le 16/04/2016 par nido91
+effacement evolution faite le 16/04/2016 par nido91
 ajout des fonctions delcaptureYesterday.py, delcaptureToday.py, delcaptureTomorrow.py et testfevrier.py
 ces fonctions permettent de ce positionner dans le répertoire capture(jour-1), capture(jour) et capture(jour+1)
 afin d'effacer les .jpg à une heure fixe commandée par crontab
@@ -26,7 +27,8 @@ Chronologie:
  crontab à minuit execute delcaptureTomorrow qui lance le prg delcaptureTomorrow.py qui lance delcapture(jour)
         
 =======
-# MajordomeV1.0
+# Majordome Version de production
+
 Majordome version d'intégration de fin de session 2015-2016
 suis-je après commit un contributor Jean
 ajout Denis
