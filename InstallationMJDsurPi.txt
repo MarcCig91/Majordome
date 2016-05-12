@@ -1,0 +1,83 @@
+#!/bin/bash
+
+# 11/05/2016 Version V1 de PRODUCTION
+#
+#-------------------------------------------------------------------------
+#     Procedure d installation de Majordome sur un raspberry pi           |
+#     avec la creation des commandes et des liens qui ne sont pas         |
+#     repris lors de la recopie du progiciel via GitHub                   |
+#_________________________________________________________________________|
+
+# Creation de la librairie de commande $HOME/Majordome/bin
+
+# test si la librairie existe ou non pour sa creation initiale
+if [ -e $HOME/Majordome/bin ]; then
+   echo " le repertoire de commande $HOME/Majordome/bin pour Majordome est bien present"
+else
+   echo " Creation du repertoire de commandes sous $HOME/Majordome/bin "
+   echo
+   sudo mkdir $HOME/Majordome/bin
+   echo
+fi
+
+echo " Ajout du repertoire $HOME/Majordome/bin dans le $PATH "
+export PATH=$PATH:$HOME/Majordome/bin
+# echo " la variable systeme $PATH est maintenant : " $PATH
+
+echo " changement de mode '+777' pour les commandes executables "
+sudo chmod -v 777 $HOME/Majordome/MJDcde/MJD
+sudo chmod -v 777 $HOME/Majordome/MJDcde/SendStartCamera
+sudo chmod -v 777 $HOME/Majordome/MJDcde/SendStopCamera
+sudo chmod -v 777 $HOME/Majordome/MJDcde/SendMailPublicIP
+sudo chmod -v 777 $HOME/Majordome/MJDcde/delcapture
+sudo chmod -v 777 $HOME/Majordome/MJDcde/IsCameraRunning
+sudo chmod -v 777 $HOME/Majordome/MJDcde/delcaptureTomorrow
+sudo chmod -v 777 $HOME/Majordome/MJDcde/PHOTODAY
+sudo chmod -v 777 $HOME/Majordome/MJDcde/delcaptureToday
+sudo chmod -v 777 $HOME/Majordome/MJDcde/delcaptureYesterday
+
+echo " Creation des liens symboliques pour execution manuelle de Majordome "
+cd $HOME/Majordome/bin
+sudo ln -s $HOME/Majordome/MJDcde/MJD MJD
+sudo ln -s $HOME/Majordome/MJDcde/SendStartCamera sta
+sudo ln -s $HOME/Majordome/MJDcde/SendStopCamera stp
+sudo ln -s $HOME/Majordome/MJDcde/SendMailPublicIP smp
+
+echo " Creation des liens symboliques pour execution  normale de Majordome "
+sudo ln -s $HOME/Majordome/MJDcde/SendStartCamera SendStartCamera
+sudo ln -s $HOME/Majordome/MJDcde/SendStopCamera SendStopCamera
+sudo ln -s $HOME/Majordome/MJDcde/IsCameraRunning IsCameraRunning
+sudo ln -s $HOME/Majordome/MJDcde/SendMailPublicIP SendMailPublicIP
+sudo ln -s $HOME/Majordome/MJDcde/delcapture delcapture
+sudo ln -s $HOME/Majordome/MJDcde/delcaptureTomorrow delcaptureTomorrow
+sudo ln -s $HOME/Majordome/MJDcde/delcaptureToday delcaptureToday
+sudo ln -s $HOME/Majordome/MJDcde/delcaptureYesterday delcaptureYesterday
+sudo ln -s $HOME/Majordome/MJDcde/PHOTODAY PHOTODAY
+
+# Suppression des liens symboliques s'il y a besoin
+#sudo unlink MJD
+#sudo unlink sta
+#sudo unlink stp
+#sudo unlink smp
+#sudo unlink SendStartCamera
+#sudo unlink SendStopCamera
+#sudo unlink IsCameraRunning
+#sudo unlink delcapture
+#sudo unlink delcaptureTomorrow
+#sudo unlink delcaptureYesterday
+#sudo unlink delcaptureToday
+#sudo unlink PHOTODAY
+#sudo unlink SendMailPublicIP
+
+cd $HOME/Majordome
+pwd
+ls -lh
+ 
+
+cd $HOME/Majordome/bin
+pwd
+ls -lh
+
+
+
+

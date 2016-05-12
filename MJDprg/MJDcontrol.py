@@ -280,7 +280,7 @@ def unknownAction(Id_ClientConnection, received_msg):
 
 #define events
 eventCamera = threading.Event() 				# used for starting/stopping the camera
-IsCameraRunning = False							# used by the web serveur to change the html view according the camera status
+IsCameraRunning = False						# used by the web serveur to change the html view according the camera status
 eventAlert = threading.Event()  				# used for starting/stopping the alert sending
 eventintrusion = threading.Event()				# used for "global" intrusion signaling
 eventintrusiongarage = False					# used for "garage" intrusion signaling
@@ -315,7 +315,7 @@ while 1:
         dictActions = 	{b'StartCamera':StartCamera,
                          b'StopCamera':StopCamera,
                          b'IsCameraRunning':Is_CameraRunning,
-						 b'IntrusionPortail':IntrusionPortail,
+			 b'IntrusionPortail':IntrusionPortail,
                         }
         dictActions.get(Action, unknownAction)(Id_ClientConnection, received_msg)
 

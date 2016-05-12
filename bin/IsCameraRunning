@@ -1,0 +1,2 @@
+#!/bin/bash
+python /home/pi/Majordome/MJDprg/IsCameraRunning.py

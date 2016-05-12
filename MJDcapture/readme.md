@@ -1,7 +1,7 @@
 ## MJDCapture
 
-MJDCapture est le dossier où l'ensemble des images prises par la caméra sont sauvegardées.
-Toutes les images des mois précédents sont compressées en .zip pour ne pas supprimer d'images tout en évitant de saturer l'espace disque.
+MJDCapture est le dossier oul'ensemble des images prises par la camera sont sauvegardees.
+Toutes les images des mois precedents sont compressees en .zip pour ne pas supprimer d'images tout en evitant de saturer l'espace disque.
 
 ### Organisation
 

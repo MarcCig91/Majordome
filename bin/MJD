@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# 11/05/2016 Version V1 de PRODUCTION 
+# Lancement manuel du programme Majordome MJDcontrol
+# en chemin absolu pour le moment
+
+cd /home/pi/Majordome/MJDprg
+pwd
+ls -lh
+python MJDcontrol.py &
+
